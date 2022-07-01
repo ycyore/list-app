@@ -5,15 +5,19 @@
 
 html {
   font-size: 100%;
-  font-family: 'Hiragino Sans', sans-serif;
+  font-family: 'Baloo 2', cursive;
+  /* original font-family is 'Hiragino Sans', sans-serif; */
   line-height: 1.7;
   letter-spacing: 1px;
 }
 
 body {
   margin: 0;
-  background-color: #f6faff;
-  color: #6c7686;
+  background-color: #F0F7E3;
+   /* #F6F7EA; */
+  /* origina background color is #f6faff; */
+  color: #000000;
+  /* original color: #6c7686; */
 }
 
 ul, li {
@@ -51,11 +55,11 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 60px;
+  padding: 120px 60px;
 }
 
 .top-detail {
-  width: 36%;
+  width: 50%;
   min-width: 320px;
   margin-top: -40px;
 }
@@ -67,6 +71,7 @@ h1 {
 }
 
 .top-detail .title {
+  font-family: 'Fredoka One', cursive;
   font-size: 54px;
   line-height: 66px;
   letter-spacing: 2px;
@@ -74,28 +79,49 @@ h1 {
 }
 
 .top-detail .description {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.5px;
   margin-bottom: 40px;
 }
 
 .top-detail .index-button {
+  font-size: 20px;
   width: 184px;
   height: 48px;
   text-align: center;
   line-height: 45px;
   font-weight: 600;
-  color: #42cea9;;
-  background-color: #ffffff;
-  border: 2px solid #58d2b2;
+  color: #ffffff;
+  /* original color is #42cea9 */
+  background-color: #64a95c;
+  /* original background color is #ffffff; */
+  border: 2px solid #64a95c;
+  /* original border color is #58d2b2 */
   border-radius: 2px;
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
 }
 
-.top-detail .index-button:hover {
-  color: #ffffff;
-  background-color:  #58d2b2;
+.index-button:hover,
+.index-button:focus,
+.index-button:active {
+    transform: scale(1.1);
 }
+ 
+
+/* .top-detail .index-button:hover {
+  color: #ffffff;
+  background-color: #64a95c;
+  original background color is #58d2b2;
+} */
 
 
 .index-button {
@@ -110,7 +136,7 @@ h1 {
 
 .top-image img {
   width: 88%;
-  padding: 70px;
+  padding: 70px 40px 70px 70px;
 }
 
 /* header ================================ */
