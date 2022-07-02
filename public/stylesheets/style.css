@@ -99,9 +99,9 @@ h1 {
   border: 2px solid #64a95c;
   /* original border color is #58d2b2 */
   border-radius: 2px;
-
   display: inline-block;
   vertical-align: middle;
+  margin-right: 25px; 
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
