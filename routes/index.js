@@ -1,8 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var database = require('../database');
 
 router.get('/', function(req, res, next) {
-  res.render('index');
+  var query = "SELECT * FROM items";
+  database.query(query, function(error, data){
+    if(error){
+      throw error;
+    }
+    else
+    {
+      console.log(data);
+      res.render('index', {items:data});
+    }
+  });
 });
 
 module.exports = router;
+
