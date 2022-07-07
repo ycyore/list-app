@@ -10,12 +10,13 @@ block content
   <head>
     <meta charset="utf-8">
     <title>LIST APP</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
-    <script src="/send_url.js"></script>
     <script src="/send_url.js"></script>
   </head>
   <body>
@@ -23,8 +24,14 @@ block content
       <a class="header-logo" href="/">LISUTO APURI</a>
     </header>
     <div class="container">
-      <div class="container-header">
-        <h1><%= title %></h1>
+      <!-- container-header -->
+      <div class="row align-items-center mx-auto" style="text-align: center;">
+        <div class="col-9">
+          <h1><%= title %></h1>
+        </div> 
+        <div class="col-3">
+          <a class="btn btn-add" href="index/add">Add</a>
+        </div>
       </div>
       
       <% if(action == 'add') { %>
@@ -37,11 +44,6 @@ block content
         </div>
 
       <% } else { %>
-        <div>
-          <a href="index/add">Add</a>
-        </div>
-
-
         <div class="index-table-wrapper">
           <div class="table-head">
             <span class="id-column">＃</span>

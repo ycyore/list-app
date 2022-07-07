@@ -1,23 +1,15 @@
-/* reset ================================ */
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 100%;
-  font-family: 'Baloo 2', cursive;
-  /* original font-family is 'Hiragino Sans', sans-serif; */
-  line-height: 1.7;
   letter-spacing: 1px;
 }
 
 body {
-  margin: 0;
   background-color: #F0F7E3;
-   /* #F6F7EA; */
-  /* origina background color is #f6faff; */
+  font-family: 'Baloo 2', cursive;
   color: #000000;
-  /* original color: #6c7686; */
 }
 
 ul, li {
@@ -88,41 +80,16 @@ h1 {
 .top-detail .index-button {
   font-size: 20px;
   width: 184px;
-  height: 48px;
-  text-align: center;
-  line-height: 45px;
-  font-weight: 600;
   color: #ffffff;
-  /* original color is #42cea9 */
   background-color: #64a95c;
-  /* original background color is #ffffff; */
-  border: 2px solid #64a95c;
-  /* original border color is #58d2b2 */
-  border-radius: 2px;
-  display: inline-block;
-  vertical-align: middle;
   margin-right: 25px; 
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
 }
-
 .index-button:hover,
 .index-button:focus,
 .index-button:active {
     transform: scale(1.1);
+    transition: all 0.3s ease;
 }
- 
-
-/* .top-detail .index-button:hover {
-  color: #ffffff;
-  background-color: #64a95c;
-  original background color is #58d2b2;
-} */
-
 
 .index-button {
   cursor: pointer;
@@ -216,4 +183,17 @@ header {
   font-size: 14px;
   font-weight: 500;
   color: #8491a5;
+}
+
+.btn-add {
+  background-color: #64a95c;
+  color: #ffffff;
+}
+
+.btn-add:hover,
+.btn-add:focus,
+.btn-add:active {
+  border-color: #43983A;
+  background-color: #43983A;
+  color: #ffffff;
 }
