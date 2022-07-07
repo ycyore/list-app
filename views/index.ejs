@@ -26,38 +26,55 @@ block content
       <div class="container-header">
         <h1><%= title %></h1>
       </div>
+      
+      <% if(action == 'add') { %>
+        <div class="card-header">Form</div>
+        <div class="card-cody">
+          <form method="POST" action="/index/add_data">
+            <label>Name</label>
+              <input type="text" name="name" id="name" />
+          </form>
+        </div>
+
+      <% } else { %>
+        <div>
+          <a href="index/add">Add</a>
+        </div>
+
+
         <div class="index-table-wrapper">
           <div class="table-head">
             <span class="id-column">＃</span>
             <span>Value</span>
+          </div>
+          <ul class="table-body">
+            <%
+            if(items.length > 0)
+            {
+              items.forEach(function(item) {
+            %>
+              <li>
+                <span class="id-column">
+                  <%= item.id %>
+                </span>
+                <span class="name-colmn">
+                  <%= item.name %>
+                </span>
+              </li>
+            <%
+              });
+            }
+            else
+            {
+            %>
+          </ul>
+          <div>
+            <p>No Data Found</p>
+          </div>
+          <% } %>
+          </ul>
         </div>
-        <ul class="table-body">
-          <%
-          if(items.length > 0)
-          {
-            items.forEach(function(item) {
-          %>
-            <li>
-              <span class="id-column">
-                <%= item.id %>
-              </span>
-              <span class="name-colmn">
-                <%= item.name %>
-              </span>
-            </li>
-          <%
-            });
-          }
-          else
-          {
-          %>
-        </ul>
-        <div>
-          <p>No Data Found</p>
-        </div>
-        <% } %>
-      </ul>
-      </div>
+      <% } %>
     </div>
   </body>
 </html>
