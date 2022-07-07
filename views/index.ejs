@@ -1,11 +1,10 @@
-
 <!-- This file is no longer used. Keep until finishing all work.
 extends layout
 
 block content
   h1= title
   p Welcome to #{title} -->
-  
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,29 +20,43 @@ block content
   </head>
   <body>
     <header>
-      <a class="header-logo">LIST APP</a>
+      <a class="header-logo" href="/">LISUTO APURI</a>
     </header>
     <div class="container">
       <div class="container-header">
-        <h1>買い物リスト</h1>
+        <h1><%= title %></h1>
       </div>
-      <div class="index-table-wrapper">
-        <div class="table-head">
-          <span class="id-column">ID</span>
-          <span>買うもの</span>
+        <div class="index-table-wrapper">
+          <div class="table-head">
+            <span class="id-column">＃</span>
+            <span>Value</span>
         </div>
         <ul class="table-body">
-          <% items.forEach((item) => { %>
+          <%
+          if(items.length > 0)
+          {
+            items.forEach(function(item) {
+          %>
             <li>
               <span class="id-column">
                 <%= item.id %>
               </span>
-              <span class="name-column">
+              <span class="name-colmn">
                 <%= item.name %>
               </span>
             </li>
-          <% }); %>
+          <%
+            });
+          }
+          else
+          {
+          %>
         </ul>
+        <div>
+          <p>No Data Found</p>
+        </div>
+        <% } %>
+      </ul>
       </div>
     </div>
   </body>

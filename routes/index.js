@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     else
     {
       console.log(data);
-      res.render('index', {items:data});
+      res.render('index', {title: 'Your list', action: 'list', items: data });
     }
   });
 });
