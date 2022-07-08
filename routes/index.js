@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/add', function(req, res, next){
-  res.render('index', {title: 'Insert Data into MySQL', action: 'add'}); 
+  res.render('index', {title: 'Add something to the list', action: 'add'}); 
 });
 
 router.post('/add_data', function(req, res, next){
